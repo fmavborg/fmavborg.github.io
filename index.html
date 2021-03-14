@@ -17,6 +17,44 @@
         type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        .fields {
+            flex: auto;
+            flex-direction: column;
+            max-width: 330px;
+            padding: 10px
+        }
+
+        .bars {
+            margin: 10px;
+            border-radius: 5px;
+            padding: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .bars:hover {
+            transform: scale(1.1);
+        }
+
+        .low {
+            width: 33%;
+            background: rgb(179, 226, 37);
+            background: linear-gradient(138deg, rgba(179, 226, 37, 1) 0%, rgba(60, 230, 48, 1) 47%, rgba(27, 201, 110, 1) 77%);
+        }
+
+        .medium {
+            width: 66%;
+            background: rgb(226, 137, 37);
+            background: linear-gradient(138deg, rgba(226, 137, 37, 1) 0%, rgba(221, 230, 48, 1) 50%, rgba(143, 201, 27, 1) 90%);
+        }
+
+        .high {
+            width: 100%;
+            background: rgb(226, 37, 37);
+            background: linear-gradient(138deg, rgba(226, 37, 37, 1) 0%, rgba(230, 110, 48, 1) 50%, rgba(201, 145, 27, 1) 90%);
+        }
+    </style>
+
 </head>
 
 <body id="page-top">
@@ -36,7 +74,7 @@
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
                             href="#description">Description</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                                href="#privacy">Privacy Policy</a></li>
+                            href="#privacy">Privacy Policy</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
                             href="#installation">Installation</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
@@ -76,8 +114,11 @@
             </div>
             <div class="text-center mt-4">
                 <p class="lead">
-                    This Google Chrome extension is part of a research project carried out by Alexander Behrmann (<a href="mailto:2250046b@student.gla.ac.uk">2250046b@student.gla.ac.uk</a>) 
-                    and supervised by Inah Omoronyia (<a href="mailto:Inah.Omoronyia@glasgow.ac.uk">Inah.Omoronyia@glasgow.ac.uk</a>) at the School of Computing Science, University of Glasgow.
+                    This Google Chrome extension is part of a research project carried out by Alexander Behrmann (<a
+                        href="mailto:2250046b@student.gla.ac.uk">2250046b@student.gla.ac.uk</a>)
+                    and supervised by Inah Omoronyia (<a
+                        href="mailto:Inah.Omoronyia@glasgow.ac.uk">Inah.Omoronyia@glasgow.ac.uk</a>) at the School of
+                    Computing Science, University of Glasgow.
                     <br />
                     Real-Time Privacy Manager is a Google Extension that checks web forms you interact with.
                     The extension extracts the labels and placeholders of each input field you add input to,
@@ -118,14 +159,27 @@
                     <li class="list-inline">Level 2: Yellow</li>
                     <li class="list-inline">Level 3: Red</li>
                 </ul>
+                <div class="fields">
+                    <div class="bars low">Personal information that does not identify you uniquely (first name, date of
+                        birth, city...)</div>
+                    <div class="bars medium">Personal information that identifies you uniquely(email, phone number,
+                        legal name...)</div>
+                    <div class="bars high">GDPR Special Category Data (racial or ethnic origin, political opinions,
+                        religious or philosophical beliefs...)</div>
+                </div>
                 <p class="lead">
                     When you interact forms, the icon of the extension will change colour in your Google Chrome toolbar.
-                    The colour of the icon will be equivalent to the most sensitive field of the form you are filling in.
+                    The colour of the icon will be equivalent to the most sensitive field of the form you are filling
+                    in.
+                </p>
+                <p>
+                    Finally, this extension gives you a sensitivity score on a scale from 0% to 100% based on the form you are filling in.
+                    This score will be shown on the extension page and displayed using a progress bar.
                 </p>
             </div>
         </div>
     </section>
-    
+
     <section class="page-section bg-primary text-white mb-0" id="privacy">
         <div class="container">
             <h2 class="page-section-heading text-center text-uppercase text-white">Privacy Policy</h2>
@@ -136,22 +190,26 @@
             </div>
             <div class="row text-center">
                 <p class="lead">
-                    While you use this extension, none of your data is recorded and there is no monitoring or logging of the system.
+                    While you use this extension, none of your data is recorded and there is no monitoring or logging of
+                    the system.
                     There is no data disclosure.
                     Any analysis on the data is completely anonymised.
                     <br />
                     <br />
-                    When you are completing the survey, you can withdraw at any time and any analysis on the data is completely anonymised as well.
+                    When you are completing the survey, you can withdraw at any time and any analysis on the data is
+                    completely anonymised as well.
                     <br />
                     <br />
-                    If you have any question regarding the extension, privacy, or the survey, you can contact me 
-                    (Alexander Behrmann) at <a class="text-white" href="mailto:2250046b@student.gla.ac.uk">2250046b@student.gla.ac.uk</a>
-                    or my project supervisor (Inah Omoronyia) at <a class="text-white" href="mailto:Inah.Omoronyia@glasgow.ac.uk">Inah.Omoronyia@glasgow.ac.uk</a>.
+                    If you have any question regarding the extension, privacy, or the survey, you can contact me
+                    (Alexander Behrmann) at <a class="text-white"
+                        href="mailto:2250046b@student.gla.ac.uk">2250046b@student.gla.ac.uk</a>
+                    or my project supervisor (Inah Omoronyia) at <a class="text-white"
+                        href="mailto:Inah.Omoronyia@glasgow.ac.uk">Inah.Omoronyia@glasgow.ac.uk</a>.
                 </p>
             </div>
         </div>
     </section>
-    
+
     <!-- About Section-->
     <section class="page-section mb-0" id="installation">
         <div class="container">
@@ -175,26 +233,27 @@
                         <br />
                         If you already have Google Chrome installed, please download the .zip file of the extension
                         using the button below.
-                        <br/>
+                        <br />
                         Once the archive has been downloaded, extract the files into an empty folder of your choosing.
                     </p>
                 </div>
                 <div class="col-lg-4 mr-auto">
                     <p class="lead">
-                        Then, start Google Chrome and navigate to <a class="text-secondary" href="chrome://extensions">chrome://extensions</a>.
+                        Then, start Google Chrome and navigate to <a class="text-secondary"
+                            href="chrome://extensions">chrome://extensions</a>.
                         <br />
                         There, on the top right corner, toggle the developer mode to on.
                         <br />
                         Afterwards, click on "Load unpacked" and select the folder where you extracted the files.
                         <br />
-                        Finally, please click the puzzle button in your Google Chrome toolbar, 
+                        Finally, please click the puzzle button in your Google Chrome toolbar,
                         scroll towards "Real-Time Privacy Manager", and click on the pin icon.
-                        <br/>
+                        <br />
                         The icon of the extension should appear in your toolbar.
                         <br />
                         You are now ready to go.
                         <br />
-                        <br/>
+                        <br />
                         For more help, please watch the small video <a href="#video" class="text-secondary">below</a>.
                     </p>
                 </div>
@@ -222,7 +281,7 @@
                     <video width="720" controls>
                         <source src="assets/video/tutorial.mov" type="video/mp4">
                     </video>
-                </div>  
+                </div>
             </div>
         </div>
     </section>
